@@ -1,14 +1,15 @@
 #greeting function
-def greet(name,greeting="Welcome"):
+def greet(name:str,greeting:str="Welcome"):
     return f"{greeting} {name}"
     
 
 #calculating discount
 
-def Price_af_discount(price,discount=10):
+def Price_af_discount(price:int,discount:int=10):
     #error handling
     if discount<0 or discount>100:
         return "Invalid discount value"
+        # raise ValueError("invalid value.Must be between 0 and 100")
     else:
         discounted_amt=(discount/100)*price
         final_amt=(price-discounted_amt)
